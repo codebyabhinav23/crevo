@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Projects - Crevo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-body-tertiary">
+
+
+    <nav id="main-nav" class="navbar navbar-expand-lg bg-body-secondary shadow-sm sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Crevo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Review Projects</a></li>
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="add-project.html">Add Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="py-5 mb-4 bg-body-secondary shadow-sm rounded-3 container mt-4">
+        <div class="container text-center">
+            <h1 class="display-6 fw-bold"><i class="bi bi-collection-fill me-2"></i>Explore All Projects</h1>
+            <p class="lead text-muted">Find interesting projects, leave constructive feedback, and help the community grow.</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section id="all-projects" class="py-5 bg-body-secondary shadow-sm rounded-3 mb-4">
+            <div class="container">
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+                    <div class="input-group w-100 w-md-50">
+                        <input type="search" class="form-control" placeholder="Search projects..." aria-label="Search projects">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                    <select class="form-select w-100 w-md-auto">
+                        <option value="">All categories</option>
+                        <option>Campus</option>
+                        <option>EdTech</option>
+                        <option>Social</option>
+                    </select>
+                    <select class="form-select w-100 w-md-auto">
+                        <option value="upvotes" selected>Sort by: Upvotes</option>
+                        <option value="newest">Sort by: Newest</option>
+                    </select>
+                </div>
+
+                <div class="row g-4" id="projects-grid">
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="EcoDash Project" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">EcoDash</h5>
+                                <p class="card-text small text-muted flex-grow-1">A dashboard for tracking personal carbon footprints and suggesting eco-friendly alternatives.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-primary bg-opacity-10 text-primary-emphasis badge-tag">React</span>
+                                    <span class="badge rounded-pill text-bg-success bg-opacity-10 text-success-emphasis badge-tag">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote EcoDash" data-upvotes="128">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">128</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#projectModal"
+                                    data-project-title="EcoDash"
+                                    data-project-img="https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=1200&auto=format&fit=crop"
+                                    data-project-desc="A dashboard for tracking personal carbon footprints and suggesting eco-friendly alternatives."
+                                    data-project-tags='<span class="badge rounded-pill text-bg-primary bg-opacity-10 text-primary-emphasis badge-tag">React</span><span class="badge rounded-pill text-bg-success bg-opacity-10 text-success-emphasis badge-tag">Node.js</span>'
+                                    data-project-live-url="#"
+                                    data-project-github-url="#">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Nomad Travel App" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">Nomad Travel</h5>
+                                <p class="card-text small text-muted flex-grow-1">A social platform for digital nomads to find co-working spaces and local events.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-warning bg-opacity-10 text-warning-emphasis badge-tag">Flutter</span>
+                                    <span class="badge rounded-pill text-bg-danger bg-opacity-10 text-danger-emphasis badge-tag">Firebase</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote Nomad Travel" data-upvotes="92">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">92</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#projectModal"
+                                    data-project-title="Nomad Travel"
+                                    data-project-img="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
+                                    data-project-desc="A social platform for digital nomads to find co-working spaces and local events."
+                                    data-project-tags='<span class="badge rounded-pill text-bg-warning bg-opacity-10 text-warning-emphasis badge-tag">Flutter</span><span class="badge rounded-pill text-bg-danger bg-opacity-10 text-danger-emphasis badge-tag">Firebase</span>'
+                                    data-project-live-url="#"
+                                    data-project-github-url="#">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Portfolio CMS" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">Portfolio CMS</h5>
+                                <p class="card-text small text-muted flex-grow-1">A headless CMS designed specifically for developers to quickly deploy their portfolios.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">Next.js</span>
+                                    <span class="badge rounded-pill text-bg-secondary bg-opacity-10 text-secondary-emphasis badge-tag">GraphQL</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote Portfolio CMS" data-upvotes="74">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">74</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#projectModal"
+                                    data-project-title="Portfolio CMS"
+                                    data-project-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+                                    data-project-desc="A headless CMS designed specifically for developers to quickly deploy their portfolios."
+                                    data-project-tags='<span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">Next.js</span><span class="badge rounded-pill text-bg-secondary bg-opacity-10 text-secondary-emphasis badge-tag">GraphQL</span>'
+                                    data-project-live-url="#"
+                                    data-project-github-url="#">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://placehold.co/1200x800/343a40/ffffff?text=DevConnect" class="card-img-top" alt="DevConnect" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">DevConnect</h5>
+                                <p class="card-text small text-muted flex-grow-1">A networking app for developers, built with a focus on real-time chat and collaboration features.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-success bg-opacity-10 text-success-emphasis badge-tag">Vue.js</span>
+                                    <span class="badge rounded-pill text-bg-danger bg-opacity-10 text-danger-emphasis badge-tag">Firebase</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote DevConnect" data-upvotes="65">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">65</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#projectModal"
+                                    data-project-title="DevConnect"
+                                    data-project-img="https://placehold.co/1200x800/343a40/ffffff?text=DevConnect"
+                                    data-project-desc="A networking app for developers, built with a focus on real-time chat and collaboration features."
+                                    data-project-tags='<span class="badge rounded-pill text-bg-success bg-opacity-10 text-success-emphasis badge-tag">Vue.js</span><span class="badge rounded-pill text-bg-danger bg-opacity-10 text-danger-emphasis badge-tag">Firebase</span>'
+                                    data-project-live-url="#"
+                                    data-project-github-url="#">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://placehold.co/1200x800/343a40/ffffff?text=StudySphere" class="card-img-top" alt="StudySphere" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">StudySphere</h5>
+                                <p class="card-text small text-muted flex-grow-1">An online platform for students to create, share, and find flashcards and study guides.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-primary bg-opacity-10 text-primary-emphasis badge-tag">Angular</span>
+                                    <span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">.NET</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote StudySphere" data-upvotes="58">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">58</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#projectModal"
+                                    data-project-title="StudySphere"
+                                    data-project-img="https://placehold.co/1200x800/343a40/ffffff?text=StudySphere"
+                                    data-project-desc="An online platform for students to create, share, and find flashcards and study guides."
+                                    data-project-tags='<span class="badge rounded-pill text-bg-primary bg-opacity-10 text-primary-emphasis badge-tag">Angular</span><span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">.NET</span>'
+                                    data-project-live-url="#"
+                                    data-project-github-url="#">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://placehold.co/1200x800/343a40/ffffff?text=Pixel+Puzzler" class="card-img-top" alt="Pixel Puzzler" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">Pixel Puzzler</h5>
+                                <p class="card-text small text-muted flex-grow-1">A retro-style 8-bit puzzle game made with pure JavaScript and HTML5 Canvas.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-warning bg-opacity-10 text-warning-emphasis badge-tag">JavaScript</span>
+                                    <span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">HTML5</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote Pixel Puzzler" data-upvotes="45">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">45</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#projectModal"
+                                    data-project-title="Pixel Puzzler"
+                                    data-project-img="https://placehold.co/1200x800/343a40/ffffff?text=Pixel+Puzzler"
+                                    data-project-desc="A retro-style 8-bit puzzle game made with pure JavaScript and HTML5 Canvas."
+                                    data-project-tags='<span class="badge rounded-pill text-bg-warning bg-opacity-10 text-warning-emphasis badge-tag">JavaScript</span><span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">HTML5</span>'
+                                    data-project-live-url="#"
+                                    data-project-github-url="#">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Project page navigation" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-body-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="projectModalLabel">Project Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="projectModalImage" class="img-fluid rounded mb-3" alt="Project Image">
+                    <p id="projectModalDescription" class="text-muted"></p>
+                    <div class="mb-2">
+                        <strong>Tags:</strong>
+                        <span id="projectModalTags"></span>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="#" id="projectModalGitHub" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-1"></i> GitHub</a>
+                    <a href="#" id="projectModalLive" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="bi bi-link-45deg me-1"></i> Live Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-dark text-white py-5">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5 class="fw-bold text-primary">Crevo</h5>
+                    <p class="text-muted mb-2">&copy; 2025 Crevo Inc. All rights reserved.</p>
+                    <p class="text-muted small mb-0">Website developed by Abhinav & Netray</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <h5 class="fw-semibold">Follow Us</h5>
+                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none fs-4 me-3" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none fs-4 me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    
+                    <div class="btn-group dropup d-inline-block">
+                        <a href="#" class="text-white text-decoration-none fs-4" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="https://www.instagram.com/abhinav2309_/" target="_blank" rel="noopener noreferrer">Abhinav (abhinav2309_)</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com/netrayyy_/" target="_blank" rel="noopener noreferrer">Netray (netrayyy_)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="upvoteToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Upvoted successfully!
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+      document.querySelectorAll('.btn-outline-success').forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Check kar rahe hain ki pehle upvote toh nahi kiya
+          if (btn.classList.contains('upvoted')) return;
+
+          // Mark as upvoted
+          btn.classList.add('upvoted');
+
+          // Upvote count badha rahe hain
+          const badge = btn.querySelector('.badge');
+          badge.textContent = parseInt(badge.textContent) + 1;
+
+          // Button disable kar rahe hain visually
+          btn.classList.replace('btn-outline-success', 'btn-success');
+          btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Upvoted ' + 
+                          `<span class="badge text-bg-light text-success ms-1">${badge.textContent}</span>`;
+
+          // Toast show kar rahe hain
+          const toastEl = document.getElementById('upvoteToast');
+          new bootstrap.Toast(toastEl).show();
+        });
+      });
+
+      // New: Project Modal ke liye JavaScript code
+      const projectModal = document.getElementById('projectModal');
+      projectModal.addEventListener('show.bs.modal', function (event) {
+          // Woh button jisne modal trigger kiya
+          const button = event.relatedTarget;
+
+          // data-bs-* attributes se info nikaal rahe hain
+          const title = button.getAttribute('data-project-title');
+          const description = button.getAttribute('data-project-desc');
+          const imageUrl = button.getAttribute('data-project-img');
+          const tags = button.getAttribute('data-project-tags');
+          const liveUrl = button.getAttribute('data-project-live-url');
+          const githubUrl = button.getAttribute('data-project-github-url');
+
+          // Modal ka content update kar rahe hain
+          const modalTitle = projectModal.querySelector('.modal-title');
+          const modalImage = projectModal.querySelector('#projectModalImage');
+          const modalDescription = projectModal.querySelector('#projectModalDescription');
+          const modalTags = projectModal.querySelector('#projectModalTags');
+          const modalLiveLink = projectModal.querySelector('#projectModalLive');
+          const modalGitHubLink = projectModal.querySelector('#projectModalGitHub');
+
+          modalTitle.textContent = title;
+          modalImage.src = imageUrl;
+          modalDescription.textContent = description;
+          modalTags.innerHTML = tags;
+          modalLiveLink.href = liveUrl;
+          modalGitHubLink.href = githubUrl;
+
+          // Agar GitHub link nahi hai toh button hide kar denge
+          if (!githubUrl || githubUrl === '#') {
+              modalGitHubLink.style.display = 'none';
+          } else {
+              modalGitHubLink.style.display = 'inline-block';
+          }
+      });
+    </script>
+
+</body>
+</html>

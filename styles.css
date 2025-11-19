@@ -1,0 +1,96 @@
+body {
+    font-family: 'Inter', sans-serif;
+    /* Main background color HTML mein .bg-body-tertiary se set hai */
+}
+
+/* --- Navbar ki styling --- */
+/* Brand aur nav links ko thoda bada dikhane ke liye */
+.navbar-brand {
+    font-size: 1.5rem; /* Brand text bada kiya */
+}
+.nav-link {
+    font-size: 1.1rem; /* Nav links bade kiye */
+    font-weight: 500;
+}
+
+
+/* ---------- Static Hero Section ---------- */
+#hero-static {
+  position: relative;
+  /* Dark image jo background me distraction na bane */ background-image: url('img1.png');
+ 
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Yeh upar rahega */
+}
+
+#hero-static::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Poore hero section ko cover karega */
+  /* Dark overlay taaki text padhne me aasaani ho */
+  background: rgba(0, 0, 0, 0.45); 
+  z-index: -1; /* Yeh content ke peeche rahega */
+}
+
+#hero-static .display-3 {
+   font-weight: 700;
+}
+
+#hero-static .btn-outline-light {
+    /* Outline button ko thoda highlight karne ke liye */
+    border-width: 2px;
+    font-weight: 600;
+}
+
+#hero-static .btn-outline-light:hover {
+    background-color: #fff;
+    color: #0b0d10; /* Hover karne par dark text */
+}
+
+
+/* ---------- Card hover lift (project / feature cards) ---------- */
+/* border hata ke hover pe thoda background color diya hai dark mode ke liye */
+.project-card,
+.feature-card {
+    transition: transform 0.18s ease, background-color 0.18s ease;
+    will-change: transform;
+    border: none;
+    border-radius: 0.75rem; /* Corners thode aur round kiye */
+}
+.project-card:hover,
+.feature-card:hover {
+    transform: translateY(-6px);
+    /* Dark mode ke liye card background thoda light kar rahe hain hover pe */
+    background-color: var(--bs-gray-700) !important; 
+}
+
+/* ---------- Featured Project Card Image Height Fix ---------- */
+.project-card .card-img-top {
+    width: 100%;
+    height: 200px; /* Saare card images ki fixed height */
+    object-fit: cover; /* Image stretch na ho, space cover kare */
+}
+
+
+
+/* ---------- Chote motey utilities ---------- */
+img.img-fluid.rounded {
+  border-radius: 8px;
+}
+.badge-tag {
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+  padding: 0.35rem 0.5rem;
+}
+/* Chrome, Edge, Safari ke liye scrollbar chhupa rahe hain */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox ke liye scrollbar chhupa rahe hain */
+html, body {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE / old Edge */
+}

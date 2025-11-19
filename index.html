@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crevo - Project Review & Leaderboard</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-body-tertiary">
+
+
+    <nav id="main-nav" class="navbar navbar-expand-lg bg-body-secondary shadow-sm sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Crevo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Review Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-project.html">Add Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">About</a>
+                    </li>
+                </ul>
+        
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero-static" class="py-5 mb-4 text-white shadow-sm">
+        <div class="container-fluid py-5 my-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto text-center">
+                    <h1 class="display-3 fw-bold">Welcome to <span class="text-primary">Crevo</span></h1>
+                    <p class="lead mb-4">Get your projects reviewed, climb the leaderboard, and see what others are building.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="add-project.html" class="btn btn-primary btn-lg px-4 me-md-2">Add Your Project</a>
+                        <a href="projects.html" class="btn btn-outline-light btn-lg px-4">Explore Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="about" class="py-5 mb-4 bg-body-secondary shadow-sm rounded-3">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card h-100 p-4 rounded-3">
+                            <i class="bi bi-cloud-arrow-up-fill fs-1 text-primary"></i>
+                            <h3 class="fs-4 fw-semibold mt-3">Add Projects</h3>
+                            <p>Easily upload your projects, add details, tags, and screenshots for the community to see.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card h-100 p-4 rounded-3">
+                            <i class="bi bi-chat-left-text-fill fs-1 text-primary"></i>
+                            <h3 class="fs-4 fw-semibold mt-3">Get Reviews</h3>
+                            <p>Receive constructive feedback and ratings from peers and mentors to improve your work.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card h-100 p-4 rounded-3">
+                            <i class="bi bi-trophy-fill fs-1 text-primary"></i>
+                            <h3 class="fs-4 fw-semibold mt-3">Climb the Leaderboard</h3>
+                            <p>Gain upvotes to see your project rise in the ranks and get featured on the homepage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-4 mb-4 bg-body-secondary shadow-sm rounded-3">
+            <div class="container">
+                <div class="row text-center g-3">
+                  <div class="col-6 col-md-3">
+                    <h3 class="fw-bold text-primary">120+</h3>
+                    <p class="text-muted mb-0">Projects</p>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <h3 class="fw-bold text-primary">340+</h3>
+                    <p class="text-muted mb-0">Reviews</p>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <h3 class="fw-bold text-primary">85</h3>
+                    <p class="text-muted mb-0">Active Users</p>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <h3 class="fw-bold text-primary">1580</h3>
+                    <p class="text-muted mb-0">Upvotes</p>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-projects" class="py-5 bg-body-secondary shadow-sm rounded-3 mb-4">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Featured Projects</h2>
+                    <p class="text-muted">Check out some of the top-rated projects from our community.</p>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+                  <div class="input-group w-100 w-md-50">
+                    <input type="search" class="form-control" placeholder="Search projects..." aria-label="Search projects">
+                    <button class="btn btn-primary" type="button">Search</button>
+                  </div>
+                  <select class="form-select w-100 w-md-auto">
+                    <option value="">All categories</option>
+                    <option>Campus</option>
+                    <option>EdTech</option>
+                    <option>Social</option>
+                  </select>
+                </div>
+
+                <div class="row g-4" id="projects-grid"> <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                          <img src="https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="EcoDash Project" loading="lazy">
+
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">EcoDash</h5>
+                                <p class="card-text small text-muted flex-grow-1">A dashboard for tracking personal carbon footprints and suggesting eco-friendly alternatives.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-primary bg-opacity-10 text-primary-emphasis badge-tag">React</span>
+                                    <span class="badge rounded-pill text-bg-success bg-opacity-10 text-success-emphasis badge-tag">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote EcoDash">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">128</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Nomad Travel App" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">Nomad Travel</h5>
+                                <p class="card-text small text-muted flex-grow-1">A social platform for digital nomads to find co-working spaces and local events.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-warning bg-opacity-10 text-warning-emphasis badge-tag">Flutter</span>
+                                    <span class="badge rounded-pill text-bg-danger bg-opacity-10 text-danger-emphasis badge-tag">Firebase</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote Nomad Travel">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">92</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card project-card h-100 shadow-sm d-flex flex-column bg-body-tertiary">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Portfolio CMS" loading="lazy">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <h5 class="card-title fw-semibold">Portfolio CMS</h5>
+                                <p class="card-text small text-muted flex-grow-1">A headless CMS designed specifically for developers to quickly deploy their portfolios.</p>
+                                <div>
+                                    <span class="badge rounded-pill text-bg-info bg-opacity-10 text-info-emphasis badge-tag">Next.js</span>
+                                    <span class="badge rounded-pill text-bg-secondary bg-opacity-10 text-secondary-emphasis badge-tag">GraphQL</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pt-0">
+                                <button class="btn btn-outline-success btn-sm" aria-label="Upvote Portfolio CMS">
+                                    <i class="bi bi-arrow-up-circle-fill"></i> Upvote <span class="badge text-bg-success ms-1">74</span>
+                                </button>
+                                <a href="#" class="btn btn-primary btn-sm">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="projects.html" class="btn btn-outline-primary btn-lg">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard-preview" class="py-5 bg-body-secondary shadow-sm rounded-3 mb-4">
+            <div class="container">
+                <div class="text-center mb-4">
+                  <h2 class="display-6 fw-bold">Leaderboard Preview</h2>
+                  <p class="text-muted">Top performing projects this week</p>
+                </div>
+                <div class="table-responsive col-md-10 offset-md-1 mx-auto">
+                  <table class="table table-striped table-hover align-middle">
+                    <thead class="table-dark">
+                      <tr><th>#</th><th>Project</th><th>Score</th><th>Reviews</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>1</td><td>EcoDash</td><td><span class="badge text-bg-success">128</span></td><td>12</td></tr>
+                      <tr><td>2</td><td>Nomad Travel</td><td><span class="badge text-bg-info">92</span></td><td>9</td></tr>
+                      <tr><td>3</td><td>Portfolio CMS</td><td><span class="badge text-bg-warning">74</span></td><td>8</td></tr>
+                      <tr><td>4</td><td>DevConnect</td><td><span class="badge text-bg-secondary">65</span></td><td>5</td></tr>
+                      <tr><td>5</td><td>StudySphere</td><td><span class="badge text-bg-secondary">58</span></td><td>7</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="text-center mt-4">
+                  <a href="leaderboard.html" class="btn btn-outline-primary">View Full Leaderboard</a>
+                </div>
+              </div>
+        </section>
+
+        <section id="faq" class="py-5 bg-body-secondary shadow-sm rounded-3 mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 mx-auto">
+                        <div class="text-center mb-4">
+                            <h2 class="display-6 fw-bold">Quick Questions</h2>
+                            <p class="text-muted">Here are some common questions about Crevo.</p>
+                        </div>
+        
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How do projects get scored?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Project scores are primarily based on community upvotes. Each upvote increments the project's score. We may introduce more complex scoring based on review quality in the future.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What kind of projects can I submit?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        You can submit any personal project, hackathon entry, or open-source tool. We welcome everything from web apps and mobile apps to data science models and UI/UX designs.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="faq.html" class="btn btn-outline-primary">See All FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+<hr>
+    <section id="cta" class="py-5 cta-banner text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-8">
+                    <h2 class="display-5 fw-bold">Ready to get feedback?</h2>
+                    <p class="lead">Join the community, share your work, and start improving your projects today.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <a href="projects.html" class="btn btn-outline-light btn-lg">Explore Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <footer class="footer-dark text-white py-5">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5 class="fw-bold text-primary">Crevo</h5>
+                    <p class="text-muted mb-2">&copy; 2025 Crevo Inc. All rights reserved.</p>
+                    <p class="text-muted small mb-0">Website developed by Abhinav & Netray</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <h5 class="fw-semibold">Follow Us</h5>
+                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none fs-4 me-3" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none fs-4 me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    
+                    <div class="btn-group dropup d-inline-block">
+                        <a href="#" class="text-white text-decoration-none fs-4" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="https://www.instagram.com/abhinav2309_/" target="_blank" rel="noopener noreferrer">Abhinav (abhinav2309_)</a></li>
+                          <li><a class="dropdown-item" href="https://www.instagram.com/netrayyy_/" target="_blank" rel="noopener noreferrer">Netray (netrayyy_)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="js/app.js"></script>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="upvoteToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Upvoted successfully!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.btn-outline-success').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const toastEl = document.getElementById('upvoteToast');
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    });
+  });
+
+  document.querySelectorAll('.btn-outline-success').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Check kar rahe hain ki pehle se upvote toh nahi kiya
+      if (btn.classList.contains('upvoted')) return;
+
+      // Mark as upvoted
+      btn.classList.add('upvoted');
+
+      // Upvote count badha rahe hain
+      const badge = btn.querySelector('.badge');
+      badge.textContent = parseInt(badge.textContent) + 1;
+
+      // Dobara click na kar sakein isliye disable jaisa dikha rahe hain
+      btn.classList.replace('btn-outline-success', 'btn-success');
+      btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Upvoted ' + 
+                      `<span class="badge text-bg-light text-success ms-1">${badge.textContent}</span>`;
+
+      // Toast show kar rahe hain
+      const toastEl = document.getElementById('upvoteToast');
+      new bootstrap.Toast(toastEl).show();
+    });
+  });
+</script>
+
+</body>
+</html>
